@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Studio Clean Background -->
+    <linearGradient id="bgStudio" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC" />
+      <stop offset="50%" stop-color="#F1F5F9" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+
+    <!-- Warm Vignette -->
+    <radialGradient id="softAura" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#F1F5F9" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#CBD5E1" stop-opacity="0.7" />
+    </radialGradient>
+
+    <!-- Realistic South Asian Skin Tone Gradient -->
+    <linearGradient id="skinBase" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C68A58" />
+      <stop offset="50%" stop-color="#AF713F" />
+      <stop offset="100%" stop-color="#8F5428" />
+    </linearGradient>
+
+    <linearGradient id="skinHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D79E6E" />
+      <stop offset="50%" stop-color="#BD7E4A" />
+      <stop offset="100%" stop-color="#9C5D30" />
+    </linearGradient>
+
+    <!-- Hair Tone & Highlights -->
+    <linearGradient id="hairDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22252A" />
+      <stop offset="40%" stop-color="#14171A" />
+      <stop offset="100%" stop-color="#0A0C0E" />
+    </linearGradient>
+
+    <linearGradient id="hairSheen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3D444D" />
+      <stop offset="100%" stop-color="#181B1F" />
+    </linearGradient>
+
+    <!-- Black Ribbed Knit Sweater -->
+    <linearGradient id="sweaterBase" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#262A30" />
+      <stop offset="30%" stop-color="#17191C" />
+      <stop offset="100%" stop-color="#0D0E10" />
+    </linearGradient>
+
+    <linearGradient id="collarRib" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#333842" />
+      <stop offset="100%" stop-color="#111215" />
+    </linearGradient>
+
+    <!-- Soft Filter for Depth -->
+    <filter id="castShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="600" height="600" fill="url(#bgStudio)" />
+  <rect width="600" height="600" fill="url(#softAura)" />
+
+  <!-- Main Figure -->
+  <g filter="url(#castShadow)">
+    <!-- Black Sweater / Torso with Raglan Cut -->
+    <!-- Torso Silhouette -->
+    <path d="M 40 600 C 45 460, 110 395, 205 385 L 395 385 C 490 395, 555 460, 560 600 Z" fill="url(#sweaterBase)" />
+
+    <!-- Sweater Ribbed Texture Lines (Vertical & Raglan) -->
+    <g stroke="rgba(255, 255, 255, 0.04)" stroke-width="2">
+      <!-- Left shoulder raglan stitch -->
+      <line x1="205" y1="385" x2="100" y2="520" stroke="rgba(255, 255, 255, 0.08)" stroke-width="2.5" />
+      <line x1="215" y1="390" x2="120" y2="530" />
+      <line x1="225" y1="395" x2="140" y2="540" />
+
+      <!-- Right shoulder raglan stitch -->
+      <line x1="395" y1="385" x2="500" y2="520" stroke="rgba(255, 255, 255, 0.08)" stroke-width="2.5" />
+      <line x1="385" y1="390" x2="480" y2="530" />
+      <line x1="375" y1="395" x2="460" y2="540" />
+
+      <!-- Center Ribbing -->
+      <line x1="250" y1="440" x2="250" y2="600" />
+      <line x1="270" y1="445" x2="270" y2="600" />
+      <line x1="290" y1="448" x2="290" y2="600" />
+      <line x1="310" y1="448" x2="310" y2="600" />
+      <line x1="330" y1="445" x2="330" y2="600" />
+      <line x1="350" y1="440" x2="350" y2="600" />
+    </g>
+
+    <!-- Ribbed Crewneck Collar -->
+    <path d="M 225 390 C 225 435, 375 435, 375 390 C 375 378, 225 378, 225 390 Z" fill="url(#collarRib)" stroke="#111215" stroke-width="3" />
+    <!-- Collar Interior Stitch Lines -->
+    <path d="M 235 395 C 255 425, 345 425, 365 395" stroke="rgba(255, 255, 255, 0.12)" stroke-width="2" fill="none" />
+
+    <!-- Neck & Throat -->
+    <path d="M 245 285 L 245 400 C 270 415, 330 415, 355 400 L 355 285 Z" fill="url(#skinBase)" />
+    <!-- Neck Shadow under chin -->
+    <path d="M 245 285 C 275 340, 325 340, 355 285 L 355 315 C 325 360, 275 360, 245 315 Z" fill="rgba(0,0,0,0.3)" />
+
+    <!-- Ears -->
+    <ellipse cx="202" cy="245" rx="14" ry="26" fill="url(#skinHighlight)" transform="rotate(-6 202 245)" />
+    <ellipse cx="398" cy="245" rx="14" ry="26" fill="url(#skinHighlight)" transform="rotate(6 398 245)" />
+    <path d="M 202 235 C 198 248, 204 256, 206 250" stroke="#78350F" stroke-width="2" fill="none" opacity="0.5" />
+    <path d="M 398 235 C 402 248, 396 256, 394 250" stroke="#78350F" stroke-width="2" fill="none" opacity="0.5" />
+
+    <!-- Head & Facial Structure -->
+    <path d="M 210 185 C 205 105, 395 105, 390 185 C 390 260, 365 320, 300 328 C 235 320, 210 260, 210 185 Z" fill="url(#skinHighlight)" />
+
+    <!-- Beard & Mustache (Natural Groomed Beard from Photo) -->
+    <!-- Full Jawline & Chin Beard -->
+    <path d="M 212 230 C 210 280, 235 332, 300 334 C 365 332, 390 280, 388 230 C 378 280, 345 305, 300 305 C 255 305, 222 280, 212 230 Z" fill="url(#hairDark)" />
+    
+    <!-- Chin Beard fill & texture -->
+    <path d="M 245 285 C 255 328, 345 328, 355 285 C 340 310, 260 310, 245 285 Z" fill="#14171A" />
+    
+    <!-- Mustache -->
+    <path d="M 262 254 C 275 248, 292 250, 300 255 C 308 250, 325 248, 338 254 C 344 258, 332 272, 300 268 C 268 272, 256 258, 262 254 Z" fill="url(#hairDark)" />
+    
+    <!-- Soul Patch -->
+    <path d="M 292 280 C 292 276, 308 276, 308 280 C 306 290, 294 290, 292 280 Z" fill="#14171A" />
+
+    <!-- Mouth & Natural Warm Expression -->
+    <path d="M 276 270 C 288 277, 312 277, 324 270" stroke="#5C2C16" stroke-width="2.5" stroke-linecap="round" fill="none" />
+    <!-- Lower Lip Hint -->
+    <path d="M 284 274 C 294 280, 306 280, 316 274" stroke="#A0522D" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6" />
+
+    <!-- Nose -->
+    <path d="M 300 190 L 297 236 C 289 238, 283 234, 279 238 C 288 245, 312 245, 321 238 C 317 234, 311 238, 303 236 L 300 190" fill="none" stroke="#78350F" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+    <!-- Subtle Nose Bridge Highlight -->
+    <line x1="300" y1="195" x2="300" y2="230" stroke="rgba(255, 255, 255, 0.2)" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Eyebrows (Natural & Thick) -->
+    <path d="M 240 180 C 255 170, 280 172, 292 181" stroke="#14171A" stroke-width="4.5" stroke-linecap="round" fill="none" />
+    <path d="M 360 180 C 345 170, 320 172, 308 181" stroke="#14171A" stroke-width="4.5" stroke-linecap="round" fill="none" />
+
+    <!-- Eyes (Warm, Dark & Expressive) -->
+    <!-- Left Eye -->
+    <ellipse cx="266" cy="196" rx="13" ry="8.5" fill="#FFFFFF" />
+    <ellipse cx="266" cy="196" rx="8" ry="8" fill="#1C1815" />
+    <circle cx="266" cy="196" r="4.5" fill="#0A0806" />
+    <circle cx="268.5" cy="193.5" r="2" fill="#FFFFFF" />
+    <!-- Upper Eyelid -->
+    <path d="M 252 195 C 260 188, 274 188, 280 195" stroke="#14171A" stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+    <!-- Right Eye -->
+    <ellipse cx="334" cy="196" rx="13" ry="8.5" fill="#FFFFFF" />
+    <ellipse cx="334" cy="196" rx="8" ry="8" fill="#1C1815" />
+    <circle cx="334" cy="196" r="4.5" fill="#0A0806" />
+    <circle cx="336.5" cy="193.5" r="2" fill="#FFFFFF" />
+    <!-- Upper Eyelid -->
+    <path d="M 320 195 C 326 188, 340 188, 348 195" stroke="#14171A" stroke-width="2.5" fill="none" stroke-linecap="round" />
+
+    <!-- Voluminous Textured Hair (Curls & Waves from Photo) -->
+    <!-- Hair Base Shape -->
+    <path d="M 205 180 C 190 120, 220 60, 300 55 C 380 60, 410 120, 395 180 C 390 155, 375 140, 350 148 C 325 130, 275 130, 250 148 C 225 140, 210 155, 205 180 Z" fill="url(#hairDark)" />
+
+    <!-- Curly Wave Silhouette Nodes & Texture -->
+    <g fill="url(#hairSheen)">
+      <circle cx="225" cy="120" r="24" />
+      <circle cx="260" cy="85" r="26" />
+      <circle cx="300" cy="72" r="28" />
+      <circle cx="340" cy="85" r="26" />
+      <circle cx="375" cy="120" r="24" />
+      <circle cx="245" cy="105" r="20" />
+      <circle cx="355" cy="105" r="20" />
+      <circle cx="300" cy="98" r="22" />
+    </g>
+
+    <!-- Hair Wave & Curl Highlights -->
+    <g stroke="rgba(255, 255, 255, 0.12)" stroke-width="2.5" fill="none" stroke-linecap="round">
+      <path d="M 235 110 C 250 90, 275 95, 285 115" />
+      <path d="M 275 80 C 295 65, 320 70, 330 92" />
+      <path d="M 325 80 C 345 70, 365 85, 370 108" />
+      <path d="M 220 140 C 235 125, 255 135, 260 150" />
+      <path d="M 340 145 C 355 130, 375 135, 380 155" />
+      <path d="M 285 115 C 300 105, 315 110, 325 125" />
+    </g>
+  </g>
+</svg>
